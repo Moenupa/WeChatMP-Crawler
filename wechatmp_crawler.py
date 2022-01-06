@@ -50,7 +50,7 @@ def getReadInfo(url):
         return -1
 
 if __name__ == "__main__":
-    if os.getenv('CI')
+    if os.getenv('CI'):
         print('ENV detected!')
         url = "https://mp.weixin.qq.com/cgi-bin/appmsg"
         headers = {
