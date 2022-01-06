@@ -21,5 +21,14 @@ jobs:
       - name: "Run python script"
         run: |
           python wechatmp_crawler.py
+        env:
+          CTRL_START: ${{ secrets.CTRL_START }}
+          CTRL_END: ${{ secrets.CTRL_END }}
+          MP_MANAGE_COOKIE: ${{ secrets.MP_MANAGE_COOKIE }}
+          MP_MANAGE_FAKEID: ${{ secrets.MP_MANAGE_FAKEID }}
+          MP_READER_COOKIE: ${{ secrets.MP_READER_COOKIE }}
+          MP_READER_KEY: ${{ secrets.MP_READER_KEY }}
+          MP_READER_PASS: ${{ secrets.MP_READER_PASS }}
+          MP_READER_TOKEN: ${{ secrets.MP_READER_TOKEN }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
