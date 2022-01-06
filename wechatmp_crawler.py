@@ -41,7 +41,7 @@ def getReadInfo(url):
         # fallback
         origin_url = "https://mp.weixin.qq.com/mp/getappmsgext?"
         appmsgext_url = origin_url + "__biz={}&mid={}&sn={}&idx={}&appmsg_token={}&x5=1".format(params['__biz'], params['mid'], params['sn'], params['idx'], params['appmsg_token'])
-        content = requests.post(appmsgext_url, headers=headers, data=data).json()
+        content = requests.get(appmsgext_url, headers=headers, data=data).json()
     
     try:
         return content["appmsgstat"]["read_num"]
