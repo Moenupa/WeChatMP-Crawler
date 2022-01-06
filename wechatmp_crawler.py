@@ -7,7 +7,6 @@ import csv
 import pandas as pd
 import locale
 from datetime import datetime
-locale.setlocale(locale.LC_ALL, 'zh-CN.UTF-8')
 from urllib.parse import urlparse, parse_qs
 
 def getReadInfo(url):
