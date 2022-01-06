@@ -1,0 +1,25 @@
+name: "Run WeChat-MP Crawler"
+on:
+  workflow_dispatch:
+
+jobs:
+  python_test:
+    name: "Run python script"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v2
+
+      - name: "Set up python"
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+          cache: 'pip'
+      - name: "Install dependencies"
+        run: pip install -r requirements.txt
+      - name: "Run python script"
+        run: |
+          python wechatmp_crawler.py
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
