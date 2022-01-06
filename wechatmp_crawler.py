@@ -82,6 +82,6 @@ if __name__ == "__main__":
         df = pd.DataFrame({"日期": date, "标题": title, "阅读量": read, "链接": link})
         df.to_csv('output.csv', encoding='utf_8_sig')
         print("job complete...")
-    else
+    else:
         print('ENV not detected!')
     
