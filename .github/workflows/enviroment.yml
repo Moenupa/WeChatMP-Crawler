@@ -20,15 +20,16 @@ jobs:
         run: pip install -r requirements.txt
       - name: "Run python script"
         run: |
-          python wechatmp_crawler.py
+          python main.py
         env:
           CTRL_START: ${{ secrets.CTRL_START }}
           CTRL_END: ${{ secrets.CTRL_END }}
-          MP_MANAGE_COOKIE: ${{ secrets.MP_MANAGE_COOKIE }}
-          MP_MANAGE_FAKEID: ${{ secrets.MP_MANAGE_FAKEID }}
-          MP_READER_COOKIE: ${{ secrets.MP_READER_COOKIE }}
-          MP_READER_KEY: ${{ secrets.MP_READER_KEY }}
-          MP_READER_PASS: ${{ secrets.MP_READER_PASS }}
-          MP_READER_TOKEN: ${{ secrets.MP_READER_TOKEN }}
+          MP_COOKIE: ${{ secrets.MP_COOKIE }}
+          MP_TOKEN: ${{ secrets.MP_TOKEN }}
+          TARGET_FAKEID: ${{ secrets.TARGET_FAKEID }}
+          WECHAT_COOKIE: ${{ secrets.WECHAT_COOKIE }}
+          WECHAT_KEY: ${{ secrets.WECHAT_KEY }}
+          WECHAT_PASS: ${{ secrets.WECHAT_PASS }}
+          WECHAT_TOKEN: ${{ secrets.WECHAT_TOKEN }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3

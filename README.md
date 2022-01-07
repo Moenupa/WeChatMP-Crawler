@@ -19,18 +19,21 @@
 5. 手动跑一次 Github Action
 6. 爬取的内容会在你的 repo 的 PR 内名为 `output.csv` 文件内
 
+注意：本 repo 内爬取阅读量、点赞数等数据暂不可用，显示为-1（截至最新 commit），笔者目前为止未搜索到可行解决方案，也无法复现 [https://github.com/wnma3mz/wechat_articles_spider](https://github.com/wnma3mz/wechat_articles_spider) 所提到的解决方案。
+
 ## API
 
 | API 名 | 用途 |
-| :--: | :--: |
-| CTRL_START | 开始页码数（注：一页包含五篇推送） |
-| CTRL_END | 截至页码数（注：一页包含五篇推送） |
-| MP_MANAGE_COOKIE | 微信公众号账号的登陆 Cookie |
-| MP_MANAGE_FAKEID | 爬取目标公众号的 FakeID |
-| MP_READER_COOKIE | 微信账号的登录 Cookie |
-| MP_READER_KEY | 微信账号登录 key |
-| MP_READER_PASS | 微信账号登录 pass_ticket |
-| MP_READER_TOKEN | 微信账号登录 token |
+| :--: | :-- |
+| `CTRL_START` | 开始页码数（注：一页包含五篇推送） |
+| `CTRL_END` | 截至页码数（注：一页包含五篇推送） |
+| `MP_COOKIE` | 微信公众号账号的登陆 Cookie |
+| `MP_TOKEN` | 微信公众号账号的登陆 token |
+| `TARGET_FAKEID` | 爬取目标公众号的 FakeID |
+| `WECHAT_COOKIE` | 微信账号的登录 Cookie |
+| `WECHAT_KEY` | 微信账号登录 key |
+| `WECHAT_PASS` | 微信账号登录 pass_ticket |
+| `WECHAT_TOKEN` | 微信账号登录 token |
 
 ## LICENSE
 
