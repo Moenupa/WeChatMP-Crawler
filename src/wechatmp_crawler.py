@@ -3,9 +3,13 @@ import random
 import requests
 import time
 import pandas as pd
+
 import locale
 from datetime import datetime
-locale.setlocale(locale.LC_ALL, 'zh-CN.UTF-8')
+try:
+    locale.setlocale(locale.LC_ALL, 'zh-CN.UTF-8')
+except locale.Error:
+    print("Fail to set locale, continue...")
 
 import os
 from dotenv import load_dotenv
