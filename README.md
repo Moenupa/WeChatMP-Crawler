@@ -15,7 +15,7 @@
 1. 微信公众号后台打开任意图文编辑界面，点击上方插入超链接，选择要爬取的目标公众号，查找 Fetch/XHR 找到目标公众号的 FakeID 和自身账户的登录 Cookie
 2. 微信电脑端打开任意公众号推送，通过 Fiddler 抓包（查找`getappmsgext`）获取自己微信号的登录信息（包括 Cookie、key、pass_ticket、token）
 3. 自行设定 `CTRL_START` `CTRL_END`，注意尽量不要一次爬取超过 20 页
-4. 打开你 fork 的 repo，创建一个名为 `CI` 的环境并将以上所有信息填写进 Environment Secret
+4. 打开你 fork 的 repo，创建一个的环境并将以上所有信息填写进 Environment Secret
 5. 手动跑一次 Github Action
 6. 爬取的内容会在你的 repo 的 PR 内名为 `output.csv` 文件内
 
